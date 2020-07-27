@@ -13,7 +13,9 @@ public class Reservasi {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(columnDefinition = "default '2000-10-10'")
     private Date tgl_berangkat;
+
     private String destinasi;
 
 }

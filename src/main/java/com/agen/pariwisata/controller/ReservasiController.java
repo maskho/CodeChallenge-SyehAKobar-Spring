@@ -14,7 +14,13 @@ public class ReservasiController {
     private ReservasiRepo reservasiRepo;
 
     @GetMapping("/reservasi")
-    public List<Reservasi> getReservasi(){
+    public List<Reservasi> getReservasi() {
         return reservasiRepo.findAll();
     }
+    @GetMapping("/reservasi/total")
+    public Integer getTotal(){
+        List<Reservasi> reservasis = reservasiRepo.findAll();
+        return reservasis.size();
+    }
+
 }
